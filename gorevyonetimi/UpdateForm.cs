@@ -26,6 +26,8 @@ namespace gorevyonetimi
 
         private void updateButton_Click(object sender, EventArgs e)
         {
+            if (textTitle.Text !="" && descriptionText.Text !="")
+            {
             var lines =File.ReadAllLines(Task.filePath).ToList();
             bool found=false;
             for (int i = 0; i < lines.Count; i++) 
@@ -37,11 +39,12 @@ namespace gorevyonetimi
                     found = true; 
                     break; 
                 }
-            
+
             }
             if (found)
             {
                 File.WriteAllLines(Task.filePath, lines);
+                this.Close();
                 MessageBox.Show($"ID {id} güncellendi.");
             }
             else
@@ -50,5 +53,6 @@ namespace gorevyonetimi
 
             }
         }
+            }
     }
 }

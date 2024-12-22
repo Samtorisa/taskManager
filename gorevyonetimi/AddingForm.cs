@@ -13,9 +13,11 @@ namespace gorevyonetimi
 {
     public partial class AddingForm : Form
     {
-        public AddingForm()
+        private ListControl formList;
+        public AddingForm(ListControl listForm)
         {
             InitializeComponent();
+           formList = listForm;
         }
 
         private void AddingForm_Load(object sender, EventArgs e)
@@ -50,27 +52,36 @@ namespace gorevyonetimi
                     wr.WriteLine(id + "," + task.title + "," + task.description + "," + DateTime.Now + "," + task.status);
                 }
 
-                MessageBox.Show("addRecords metodu çağrıldı.");
+                MessageBox.Show("Başarı ile eklendi");
 
 
             }
             catch (Exception ex)
             {
-                throw new Exception("akfşkjasdşfk");
+                MessageBox.Show("Bir hata oluştu: " + ex.Message);
             }
         }
 
 
         private void ButtonAdd(object sender, EventArgs e)
         {
-            AddingForm addingForm= new AddingForm();
+            if(textTitle.Text!="" &&descriptionText.Text !="")
+            {
+
+
             Task task = new Task();
             task.title = textTitle.Text;
             task.description = descriptionText.Text;
             task.date=DateTime.Now;
-            task.status = status.Text;
+            task.status = "YAPILACAK";
             addRecords(Task.filePath, task);
-            addingForm.Close();
+
+                this.Close();
+                formList.getData();
+            }else
+            {
+                MessageBox.Show("boş alan bırakmayınız");
+            }
         }
         
     }

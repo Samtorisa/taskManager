@@ -9,6 +9,6 @@ C:\Users\samet\source\repos\gorevyonetimi\gorevyonetimi\obj\Debug\gorevyonetimi.
 C:\Users\samet\source\repos\gorevyonetimi\gorevyonetimi\obj\Debug\gorevyonetimi.csproj.CoreCompileInputs.cache
 C:\Users\samet\source\repos\gorevyonetimi\gorevyonetimi\obj\Debug\gorevyonetimi.exe
 C:\Users\samet\source\repos\gorevyonetimi\gorevyonetimi\obj\Debug\gorevyonetimi.pdb
-C:\Users\samet\source\repos\gorevyonetimi\gorevyonetimi\obj\Debug\gorevyonetimi.GraphTask.resources
 C:\Users\samet\source\repos\gorevyonetimi\gorevyonetimi\obj\Debug\gorevyonetimi.ListControl.resources
 C:\Users\samet\source\repos\gorevyonetimi\gorevyonetimi\obj\Debug\gorevyonetimi.UpdateForm.resources
+C:\Users\samet\source\repos\gorevyonetimi\gorevyonetimi\obj\Debug\gorevyonetimi.Statistics.resources

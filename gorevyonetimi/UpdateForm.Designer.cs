@@ -39,11 +39,12 @@
             // 
             // status
             // 
+            this.status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.status.FormattingEnabled = true;
             this.status.Items.AddRange(new object[] {
             "YAPILIYOR",
-            "BITTI",
-            "BASLANMADI"});
+            "YAPILDI",
+            "YAPILACAK"});
             this.status.Location = new System.Drawing.Point(435, 166);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(121, 21);

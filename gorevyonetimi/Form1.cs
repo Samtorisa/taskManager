@@ -13,6 +13,7 @@ namespace gorevyonetimi
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace gorevyonetimi
         public void setActivePanel(UserControl userControl)
         {
             listControl1.Visible = false;
-            graphTask1.Visible = false;
+            statistics1.Visible = false;
             userControl.Visible = true;
         }
 
@@ -40,9 +41,28 @@ namespace gorevyonetimi
             setActivePanel(listControl1);
         }
 
-        private void buttonGraph_Click(object sender, EventArgs e)
+      
+        
+        
+
+        private void listControl1_Load(object sender, EventArgs e)
         {
-            setActivePanel(graphTask1);
+
+        }
+
+        private void buttonStatistic_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            statistics1.loadTable();
+            setActivePanel(statistics1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bir hata oluştu: " + ex.Message);
+            }
+
         }
     }
 }
